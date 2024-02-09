@@ -1,4 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Paulus Schulinck
 #
+# SPDX-License-Identifier: MIT
+###############################
 # An offline image gallery that switches between groups of five .jpg images
 # on your SD card (copy them across by plugging your SD into a computer).
 #
@@ -10,6 +13,13 @@ from jpegdec import JPEG
 import uos
 from boot import *
 import inky_frame
+
+try:
+    from micropython import const
+except ImportError:
+
+    def const(x):
+        return x
 
 sys.path.append('/sd')
 from seesaw.seesaw_gamepad_qt_mpy_v2 import Seesaw
