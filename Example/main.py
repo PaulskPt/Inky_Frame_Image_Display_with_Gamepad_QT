@@ -395,7 +395,7 @@ def main():
 
             if idx in [0, 1, 2, 3 ,4]:  # handle only if a button was pressed
                 if not msg1_shown:
-                    print(TAG+f"index of keypress is: {idx}")
+                    print(TAG+f"index of Inky Frame keypress is: {idx}")
                     msg1_shown = True
                 idx2 = ((selected_group) * 5) + idx
                 if not msg2_shown and not disp_fail:
