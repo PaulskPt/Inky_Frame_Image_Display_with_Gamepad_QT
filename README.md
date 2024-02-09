@@ -1,5 +1,5 @@
 
-Pimoroni Inky Frame 5.7 with Adafruit Gamepad QT using Micropython seesaw module
+Pimoroni Inky Frame 5.7 with Adafruit Gamepad QT using Micropython and a modified seesaw module
 
 This small project provides an addition to an existing script to display images on the [ Pimoroni Inkey Frame 5.7](https://shop.pimoroni.com/products/inky-frame-5-7?variant=40048398958675) to communicate via I2C with an [Adafruit Gamepad QT](https://www.adafruit.com/product/5743). 
 The buttons 'X, Y, A and B´ on the 'Gamepad QT´ are used to switch between two (or more if you want) groups of five images to display on the Inky Frame.
