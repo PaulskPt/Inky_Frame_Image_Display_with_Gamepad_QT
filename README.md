@@ -7,7 +7,7 @@ As said above, the communication between the Inky Frame (read: RPi Pico W) and t
 with the Adafruit Gamepad QT in Micropython. I had to add some functions from the Adafruit seesaw module. On the other hand I had to take some measures to have this project running well in limited memory space. For this, in the file: 'seesaw_gamepad_qt_mpy_v2.py', in functions: ´pin_mode_bulk()' and 'digital_read_bulk()', I had to add defaults to parameters 'pin' and 'mode', so that the calling program doesn't need to hand over these paramters (no need to use stack space).
 The buttons ´A' and 'X' of the Gamepad QT are used to increase the 'selected group' of images (there are 5 images per group). The buttons 'B' and 'Y' of the Gamepad QT are used to decrease the 'selected group'. The five buttons 'A', 'B', 'C', 'D' and 'E' on the front of the Inky Frame are used to load and display one of the five images of the 'selected group'.
 
-This repo has 10 images in the folder '/image'. Some images taken from the hardware setup and wiring are in the folder '/doc_images'.
+This repo has 10 images in the folder '/image'.
 
 Note that, to save memory in the Raspberry Pi Pico W, I put as many as possible files and images onto the SD-Card.
 In the main folder ('/Raspberry Pi Pico') there is also a script named 'boot.py' which connects the SD-Card at boot time.
