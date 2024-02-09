@@ -19,8 +19,8 @@ Before to be able to run ´main.py´ you need to flash the Raspberry Pi Pico W o
 
 TROUBLESHOOTING
 
-If, for some reason, after running main.py you want and don't get access to the SD-Card: run boot.py from within your IDE (I use: Thonny) and issue ```
-
+If, for some reason, after running main.py you want and don't get access to the SD-Card: run boot.py from within your IDE (I use: Thonny) and issue 
+```
 (Thonny) '%cd '/sd' <Enter>
 ```
 
