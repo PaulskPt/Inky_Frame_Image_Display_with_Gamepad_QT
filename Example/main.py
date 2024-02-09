@@ -201,7 +201,7 @@ def ck_qt_btns():
     BUTTON_START = const(16)
     
     TAG = "ck_qt_btns(): "
-    s_btn = "Button "
+    s_btn = "Gamepad QT button "
     s_pre = " pressed"
     btns = ["X", "Y", "A", "B"]
     btn_names = ["BUTTON_X", "BUTTON_Y", "BUTTON_A", "BUTTON_B"]
@@ -382,6 +382,7 @@ def main():
     msg3_shown = False
     disp_fail = False
     print(TAG+f"Current selected group = {selected_group}")
+    old_idx = -1
     #loop_nr = 0
     while True:
         try:
@@ -394,8 +395,11 @@ def main():
             idx = ck_btns() # Check button presses on the Inky Frame
 
             if idx in [0, 1, 2, 3 ,4]:  # handle only if a button was pressed
+                if old_idx != idx:
+                    old_idx = idx
+                    msg1_shown = False
                 if not msg1_shown:
-                    print(TAG+f"index of Inky Frame keypress is: {idx}")
+                    print(TAG+f"Inky Frame button {idx+1} pressed")
                     msg1_shown = True
                 idx2 = ((selected_group) * 5) + idx
                 if not msg2_shown and not disp_fail:

@@ -1,4 +1,4 @@
-Friday 2024-02-09 16:10 utc
+Friday 2024-02-09 19h23 utc
 
 Board: Pimoroni Inky Frame 5.7
 Flashed with: 
@@ -13,9 +13,6 @@ TODO: fine-tune time.sleep()'s to get a better response to button presses on the
 
 IDE: Thonny
 
-Shell Output:
-
-
 
 >>> %Run -c $EDITOR_CONTENT
 File: boot.py: SD card mounted at "/sd"
@@ -28,9 +25,10 @@ Gamepad QT buttons A or X <<< Group index >>> buttons B or Y
 Press button A...E to display an image
 USB power!
 main(): Current selected group = 0
-Button A pressed
-ck_qt_btns(): Group nr inreased. New selected group = 1
-main(): index of keypress is: 2
-main(): Going to show image whos index is: 7
-Opening image file:   8 '/sd/images/MSFS2020_KittyHawk_E3.jpg'
+Gamepad QT button B pressed
+ck_qt_btns(): Group nr decreased. New selected group = 1
+main(): Inky Frame button 4 pressed
+main(): Going to show image whos index is: 8
 Opening image file:   9 '/sd/images/MSFS2020_Pilatus_Porter_v2.jpg'
+KeyboardInterrupt. Exiting...
+>>> 
