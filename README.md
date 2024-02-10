@@ -10,7 +10,7 @@ The buttons ```A``` and ```X``` of the Gamepad QT are used to increase the ```se
 This repo has 10 images in the folder ```/image```. The ```main.py``` script expects the images to be in the SD-Card in folder ```/sd/images```.
 
 Note that, to save memory in the Raspberry Pi Pico W, I put as many as possible files and images onto the SD-Card.
-In the main folder ('/Raspberry Pi Pico') there is also a script named 'boot.py' which connects the SD-Card at boot time.
+In the main folder (```/Raspberry Pi Pico```) there is also a script named 'boot.py' which connects the SD-Card at boot time.
 The script ```main.py``` loads also ```boot.py```.
 
 REQUIREMENTS
