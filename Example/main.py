@@ -257,7 +257,7 @@ def ck_qt_btns():
             selected_group += 1  # goto next group
             if selected_group > nr_groups -1:
                 selected_group = 0  # Goto first group
-            print(TAG+f"Group nr inreased. New selected group = {selected_group}")
+            print(TAG+f"Group nr increased. New selected group = {selected_group}")
             blink_activity_led(selected_group+1, True)  # show the choosen group by blinking the activity led
         if btnY or btnB:
             selected_group -= 1 # goto previous group
