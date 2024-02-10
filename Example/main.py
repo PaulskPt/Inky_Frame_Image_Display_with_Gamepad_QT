@@ -128,6 +128,7 @@ gc.collect()
 def blink_activity_led(nr_times, activ_led=False, blink_slow=True):
     global activity_led_state
     curr_state = activity_led_state
+    # print(f"blink_activity_led(): nr_times: {nr_times}, activ_led= {activ_led}, blink_slow= {blink_slow}")
     if nr_times is None:
         nr_times = 1
         
@@ -257,13 +258,13 @@ def ck_qt_btns():
             if selected_group > nr_groups -1:
                 selected_group = 0  # Goto first group
             print(TAG+f"Group nr inreased. New selected group = {selected_group}")
-            blink_activity_led(nr_groups+1)  # show the choosen group by blinking the activity led
+            blink_activity_led(selected_group+1, True)  # show the choosen group by blinking the activity led
         if btnY or btnB:
             selected_group -= 1 # goto previous group
             if selected_group < 0:
                 selected_group = nr_groups -1 # goto last group
             print(TAG+f"Group nr decreased. New selected group = {selected_group}")
-            blink_activity_led(nr_groups+1)  # show the choosen group by blinking the activity led
+            blink_activity_led(selected_group+1, True)  # show the choosen group by blinking the activity led
         res = -1
         
         activity_led.value(0)
