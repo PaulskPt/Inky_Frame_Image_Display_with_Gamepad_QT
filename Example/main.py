@@ -278,8 +278,8 @@ def setup():
     
     print("\nImage gallery SD modified example for Pimoroni Inky Frame")
     if qt_btns_present :
-        print("Gamepad QT buttons A or X <<< Group index >>> buttons B or Y")
-    print("Press button A...E to display an image")
+        print("Press Gamepad QT buttons A or X <<< Group index >>> buttons B or Y")
+    print("Press Inky Frame button A...E to display an image")
 
     gc.collect()  # Claw back some RAM!
     # set up and enable vsys hold so we don't go to sleep
