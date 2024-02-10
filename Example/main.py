@@ -257,13 +257,13 @@ def ck_qt_btns():
             selected_group += 1  # goto next group
             if selected_group > nr_groups -1:
                 selected_group = 0  # Goto first group
-            print(TAG+f"Group nr increased. New selected group = {selected_group}")
+            print(TAG+f"Group nr increased. New selected group = {selected_group+1}")
             blink_activity_led(selected_group+1, True)  # show the choosen group by blinking the activity led
         if btnY or btnB:
             selected_group -= 1 # goto previous group
             if selected_group < 0:
                 selected_group = nr_groups -1 # goto last group
-            print(TAG+f"Group nr decreased. New selected group = {selected_group}")
+            print(TAG+f"Group nr decreased. New selected group = {selected_group+1}")
             blink_activity_led(selected_group+1, True)  # show the choosen group by blinking the activity led
         res = -1
         
@@ -383,7 +383,7 @@ def main():
     msg2_shown = False
     msg3_shown = False
     disp_fail = False
-    print(TAG+f"Current selected group = {selected_group}")
+    print(TAG+f"Current selected group = {selected_group+1}")
     old_idx = -1
     #loop_nr = 0
     while True:
