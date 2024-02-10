@@ -1,4 +1,4 @@
-Friday 2024-02-09 19h02 utc
+Saturday 2024-02-10 18h06 utc
 
 Board: Pimoroni Inky Frame 5.7
 Flashed with: 
@@ -14,7 +14,7 @@ TODO: fine-tune time.sleep()'s to get a better response to button presses on the
 IDE: Thonny
 
 
->>> %Run -c $EDITOR_CONTENT
+>> %Run -c $EDITOR_CONTENT
 File: boot.py: SD card mounted at "/sd"
 _pin_mode_bulk_x(): pins= 65639, mode= 2
 global: seesaw.chip_id= 0x87
@@ -25,12 +25,12 @@ Gamepad QT buttons A or X <<< Group index >>> buttons B or Y
 Press button A...E to display an image
 USB power!
 main(): Current selected group = 0
-main(): Inky Frame button 5 pressed
-main(): Going to show image whos index is: 4
-Opening image file:   5 '/sd/images/jwst5.jpg'
-Button A pressed
-ck_qt_btns(): Group nr inreased. New selected group = 1
-main(): Inky Frame button 2 pressed
-Opening image file:   7 '/sd/images/MSFS2020_C337H_2.jpg'
+Gamepad QT button X pressed
+ck_qt_btns(): Group nr increased. New selected group = 1
+Gamepad QT button B pressed
+ck_qt_btns(): Group nr decreased. New selected group = 0
+Gamepad QT button Y pressed
+ck_qt_btns(): Group nr decreased. New selected group = 1
+Gamepad QT button A pressed
+ck_qt_btns(): Group nr increased. New selected group = 0
 KeyboardInterrupt. Exiting...
->>> 
