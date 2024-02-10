@@ -1,0 +1,66 @@
+Saturday 2024-02-10 12h56 utc
+
+Board: Pimoroni Inky Frame 5.7
+Flashed with: 
+MicroPython v1.21.0, inky_frame v1.21.0 on 2023-10-06; Raspberry Pi Pico W with RP2040
+
+and via I2C connected: an Adafruit Gamepad QT (ID 5743)
+
+(Test below done after some deletions of not used definitions in the module file: seesaw_gamepad_qt_mpy.py)
+
+TODO: fine-tune time.sleep()'s to get a better response to button presses on the Gamepad QT.
+      In this moment one has to press a button for too long time.
+
+IDE: Thonny
+
+>> %Run -c $EDITOR_CONTENT
+File: boot.py: SD card mounted at "/sd"
+_pin_mode_bulk_x(): pins= 65639, mode= 2
+global: seesaw.chip_id= 0x87
+global: qt_btns_present = True
+
+Image gallery SD modified example for Pimoroni Inky Frame
+Gamepad QT buttons A or X <<< Group index >>> buttons B or Y
+Press button A...E to display an image
+USB power!
+main(): Current selected group = 0
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x67 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c067, ret & pins: 0x10067  <<<=== Gamepad QT no button pressed
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x67 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c067, ret & pins: 0x10067           same 
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x67 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c067, ret & pins: 0x10067           same 
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x27 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c027, ret & pins: 0x10027  <<<=== Gamepad QT button X pressed
+Gamepad QT button X pressed
+ck_qt_btns(): Group nr inreased. New selected group = 1
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x27 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c027, ret & pins: 0x10027
+Gamepad QT button X pressed
+ck_qt_btns(): Group nr inreased. New selected group = 0
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x67 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c067, ret & pins: 0x10067  <<<=== Gamepad QT no button pressed
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x67 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c067, ret & pins: 0x10067           same 
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x67 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c067, ret & pins: 0x10067           same 
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x67 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c067, ret & pins: 0x10067           same 
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x67 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c067, ret & pins: 0x10067           same 
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x27 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c027, ret & pins: 0x10027           same 
+Gamepad QT button X pressed
+ck_qt_btns(): Group nr inreased. New selected group = 1
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x27 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c027, ret & pins: 0x10027  <<<=== Gamepad QT button X pressed
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x67
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c067, ret & pins: 0x10067  <<<=== Gamepad QT no button pressed
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x63 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c063, ret & pins: 0x10063  <<<=== Gamepad QT button Y pressed
+Gamepad QT button Y pressed
+ck_qt_btns(): Group nr decreased. New selected group = 1
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x67 
+seesaw.digital_read_bulk(): buf after read and unpack: 0x1c067, ret & pins: 0x10067  <<<=== Gamepad QT no button pressed
+seesaw.digital_read_bulk(): buf after read: 0x0 0x1 0xc0 0x67 
+KeyboardInterrupt. Exiting...
