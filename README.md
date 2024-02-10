@@ -15,12 +15,12 @@ The script 'main.py' loads also 'boot.py'.
 
 REQUIREMENTS
 
-Before to be able to run ´main.py´ you need to flash the Raspberry Pi Pico W on the Pimoroni Inky Frame 6.7 with Pimoroni's customized version of [MicroPython micropython-pico](https://github.com/pimoroni/pimoroni-pico/releases/latest/). To download click: [pimoroni-pico micropython](https://github.com/pimoroni/pimoroni-pico/releases/download/v1.21.0/pimoroni-pico-v1.21.0-micropython.uf2).
+Before to be able to run ´main.py´ you need to flash the Raspberry Pi Pico W on the Pimoroni Inky Frame 5.7 with Pimoroni's customized version of [MicroPython micropython-pico](https://github.com/pimoroni/pimoroni-pico/releases/latest/). To download click: [pimoroni-pico micropython](https://github.com/pimoroni/pimoroni-pico/releases/download/v1.21.0/pimoroni-pico-v1.21.0-micropython.uf2).
 
 TROUBLESHOOTING
 
-If, for some reason, after running main.py you want and don't get access to the SD-Card: run boot.py from within your IDE (I use: Thonny) and issue ```
-
+If, for some reason, after running main.py you want and don't get access to the SD-Card: run boot.py from within your IDE (I use: Thonny) and issue 
+```
 (Thonny) '%cd '/sd' <Enter>
 ```
 
