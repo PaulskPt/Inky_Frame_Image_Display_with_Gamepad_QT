@@ -139,26 +139,26 @@ def blink_activity_led(nr_times, activ_led=False, blink_slow=True):
     if curr_state == 1:
         if activ_led:
             activity_led.value(0)  # first switch the led off
-        conn_led.value(0)
+        #conn_led.value(0)
         bi_led.off()
         time.sleep_ms(delay)
     
     for _ in range(nr_times):
         if activ_led:
             activity_led.value(1)
-        conn_led.value(1)
+        #conn_led.value(1)
         bi_led.on()
         time.sleep_ms(delay)
         if activ_led:
             activity_led.value(0)
-        conn_led.value(0)
+        #conn_led.value(0)
         bi_led.off()
         time.sleep_ms(delay)
         
     if curr_state == 1:  # if the led originally was on, switch it back on
         if activ_led:
             activity_led.value(1)
-        conn_led.value(1)
+        #conn_led.value(1)
         bi_led.on()   
 
 def display_image(nr, filename):
@@ -257,17 +257,17 @@ def ck_qt_btns():
             if selected_group > nr_groups -1:
                 selected_group = 0  # Goto first group
             print(TAG+f"Group nr inreased. New selected group = {selected_group}")
-            blink_activity_led(nr_groups)  # show the choosen group by blinking the activity led
+            blink_activity_led(nr_groups+1)  # show the choosen group by blinking the activity led
         if btnY or btnB:
             selected_group -= 1 # goto previous group
             if selected_group < 0:
                 selected_group = nr_groups -1 # goto last group
             print(TAG+f"Group nr decreased. New selected group = {selected_group}")
-            blink_activity_led(nr_groups)  # show the choosen group by blinking the activity led
+            blink_activity_led(nr_groups+1)  # show the choosen group by blinking the activity led
         res = -1
         
         activity_led.value(0)
-        conn_led.value(0)
+        #conn_led.value(0)
         activity_led_state = 0
         
         
@@ -320,8 +320,8 @@ def setup():
         print('{:.0f}%'.format(percentage))
         
     # setup
-    activity_led.value(1)
-    activity_led_state = 1
+    activity_led.value(0)  # was 1
+    activity_led_state = 0 # same
 
 # Check for button presses on the Inkey Frame
 def ck_btns():
@@ -343,9 +343,10 @@ def ck_btns():
     button_d = sr[4]
     button_e = sr[3]
 
-    # light up the activity LED when Inky is awake
-    activity_led.value(1)
-    activity_led_state = 1
+    if button_a or button_b or button_c or button_d or button_e:
+        # light up the activity LED when Inky is awake
+        activity_led.value(1)
+        activity_led_state = 1
     idx = -1 # force key not found if no button was pressed
 
     if button_a == 1:
