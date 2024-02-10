@@ -326,7 +326,7 @@ def setup():
 
 # Check for button presses on the Inkey Frame
 def ck_btns():
-    global button_a, button_b, button_c, button_d, button_e
+    global button_a, button_b, button_c, button_d, button_e, activity_led_state
     button_a_led.off()
     button_b_led.off()
     button_c_led.off()
